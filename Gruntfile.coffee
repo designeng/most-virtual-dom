@@ -9,11 +9,21 @@ module.exports = (grunt) ->
         watch:
             coffee_app:
                 files: ['app/coffee/**/**.coffee']
+                tasks: ["browserify"]
+            coffee_app_lib:
+                files: ['app/coffee/lib/**/**.coffee']
                 tasks: ["coffee-compile-app"]
             js:
-                files: ["app/js/**/**.js"]
+                files: ["app/js/**/**.js", "build/**/**.js"]
                 options:
                     livereload: true
+
+        browserify:
+            dist:
+                files:
+                    'build/module.js': ['app/js/**/*.js', 'app/coffee/**/*.coffee']
+            options:
+                transform: ['coffeeify']
 
         coffee:
             app:
@@ -48,6 +58,7 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks "grunt-contrib-coffee"
     grunt.loadNpmTasks "grunt-contrib-connect"
     grunt.loadNpmTasks "grunt-contrib-concat"
+    grunt.loadNpmTasks "grunt-browserify"
     grunt.loadNpmTasks "grunt-newer"
 
     grunt.registerTask "default", ["connect:server", "watch"]
