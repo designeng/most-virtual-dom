@@ -1,4 +1,5 @@
 connectMW = require(require("path").resolve("middleware", "connectMW.coffee"))
+remapify = require "remapify"
 
 module.exports = (grunt) ->
 
@@ -24,6 +25,14 @@ module.exports = (grunt) ->
                     'build/module.js': ['app/js/**/*.js', 'app/coffee/**/*.coffee']
             options:
                 transform: ['coffeeify']
+                preBundleCB: (b) ->
+                    b.plugin(remapify, [
+                        {
+                            cwd: 'app/js/lib/'
+                            src: '**/*.js'
+                            expose: 'lib'
+                        }
+                    ])
 
         coffee:
             app:

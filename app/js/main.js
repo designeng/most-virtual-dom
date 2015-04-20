@@ -1,4 +1,4 @@
-var addTodo, createController, h, model, most;
+var addTodo, createController, h, model, most, view;
 
 most = require("most");
 
@@ -6,7 +6,9 @@ h = require("virtual-dom/h");
 
 model = require('lib/model');
 
-console.debug("application");
+view = require('lib/view');
+
+console.debug("application", model);
 
 exports.main = function() {
   var actions, appWrapper;

@@ -2,9 +2,10 @@ most = require "most"
 h = require "virtual-dom/h"
 
 model = require('lib/model')
-# view = require('view')
+view = require('lib/view')
 
-console.debug "application"
+console.debug "model:::", model
+console.debug "view:::", view
 
 exports.main = ->
     appWrapper = document.getElementById('application')
