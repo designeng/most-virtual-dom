@@ -33,6 +33,7 @@ runTasks = ->
         ++i
 
 module.exports = (render, updates, el) ->
+    console.debug "VIEW::::::::::::::::::::"
     return updates.scan (state, store) ->
         return state.then (state) ->
             store.map (data) ->

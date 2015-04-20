@@ -9,7 +9,7 @@ module.exports = (grunt) ->
     grunt.initConfig
         watch:
             coffee_app:
-                files: ['app/coffee/**/**.coffee']
+                files: ['app/coffee/main.coffee']
                 tasks: ["browserify"]
             coffee_app_lib:
                 files: ['app/coffee/lib/**/**.coffee']

@@ -49,6 +49,7 @@ runTasks = function() {
 };
 
 module.exports = function(render, updates, el) {
+  console.debug("VIEW::::::::::::::::::::");
   return updates.scan(function(state, store) {
     return state.then(function(state) {
       store.map(function(data) {

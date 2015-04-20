@@ -8,7 +8,9 @@ model = require('lib/model');
 
 view = require('lib/view');
 
-console.debug("application", model);
+console.debug("model:::", model);
+
+console.debug("view:::", view);
 
 exports.main = function() {
   var actions, appWrapper;
