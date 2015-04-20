@@ -48,16 +48,16 @@ module.exports = (grunt) ->
                             connectMW.folderMount(connect, options.base)
                         ]
 
-        concat:
-            main:
-                src: ["app/js/requireConfig.js", "app/js/main.js"]
-                dest: "app/js/supermain.js"
+        # concat:
+        #     main:
+        #         src: ["app/js/requireConfig.js", "app/js/main.js"]
+        #         dest: "app/js/supermain.js"
 
+    # grunt.loadNpmTasks "grunt-contrib-concat"
 
     grunt.loadNpmTasks "grunt-contrib-watch"
     grunt.loadNpmTasks "grunt-contrib-coffee"
     grunt.loadNpmTasks "grunt-contrib-connect"
-    grunt.loadNpmTasks "grunt-contrib-concat"
     grunt.loadNpmTasks "grunt-browserify"
     grunt.loadNpmTasks "grunt-newer"
 
