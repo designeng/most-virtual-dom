@@ -6,6 +6,7 @@
     "underscore": "latest"
   },
   "devDependencies": {
+    "browserify": "^9.0.8",
     "coffeeify": "^1.0.0",
     "grunt-browserify": "^3.7.0",
     "grunt-contrib-coffee": "~0.7.0",
@@ -14,6 +15,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-newer": "~0.6.1",
     "most": "^0.13.2",
+    "remapify": "^2.0.1",
     "swym": "briancavalier/swym",
     "virtual-dom": "^2.0.1",
     "when": "^3.7.2"
