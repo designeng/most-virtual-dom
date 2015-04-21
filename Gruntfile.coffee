@@ -22,7 +22,7 @@ module.exports = (grunt) ->
         browserify:
             dist:
                 files:
-                    'build/module.js': ['app/js/**/*.js', 'app/coffee/**/*.coffee']
+                    'build/module.js': ['app/coffee/main.coffee']
             options:
                 transform: ['coffeeify']
                 preBundleCB: (b) ->
@@ -56,13 +56,6 @@ module.exports = (grunt) ->
                         return [
                             connectMW.folderMount(connect, options.base)
                         ]
-
-        # concat:
-        #     main:
-        #         src: ["app/js/requireConfig.js", "app/js/main.js"]
-        #         dest: "app/js/supermain.js"
-
-    # grunt.loadNpmTasks "grunt-contrib-concat"
 
     grunt.loadNpmTasks "grunt-contrib-watch"
     grunt.loadNpmTasks "grunt-contrib-coffee"

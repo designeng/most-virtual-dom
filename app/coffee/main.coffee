@@ -4,9 +4,6 @@ h = require "virtual-dom/h"
 model = require('lib/model')
 view = require('lib/view')
 
-console.debug "model:::", model
-console.debug "view:::", view
-
 exports.main = ->
     appWrapper = document.getElementById('application')
 
